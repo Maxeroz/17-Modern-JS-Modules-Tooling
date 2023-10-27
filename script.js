@@ -49,7 +49,6 @@ console.log(lasPost);
 const lastPost2 = await getLastPost();
 console.log(lastPost2);
 
-*/
 // The Module Pattern
 
 const ShoppingCart2 = (function () {
@@ -80,4 +79,6 @@ const ShoppingCart2 = (function () {
 ShoppingCart2.addToCart('apple', 4);
 ShoppingCart2.addToCart('pizza', 2);
 
+*/
 // CommonJS Modules
+// A Brief Introduction to the Command Line
