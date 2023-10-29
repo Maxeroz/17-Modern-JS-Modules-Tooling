@@ -82,3 +82,24 @@ ShoppingCart2.addToCart('pizza', 2);
 */
 // CommonJS Modules
 // A Brief Introduction to the Command Line
+
+// Introduction to NPM
+
+import clodeDeep from './node_modules/lodash-es/cloneDeep.js';
+
+const state = {
+  cart: [
+    { product: 'bread', quntity: 5 },
+    { product: 'pizza', quntity: 5 },
+  ],
+  user: {
+    loggedIn: true,
+  },
+};
+
+const stateClone = Object.assign({}, state);
+const stateDeepClone = clodeDeep(state);
+
+state.user.loggedIn = false;
+console.log(stateClone);
+console.log(stateDeepClone);
