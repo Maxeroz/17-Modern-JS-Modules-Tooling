@@ -17,10 +17,10 @@ console.log('Importing module');
 // import add, { addToCart, totalPrice as price, tq } from './shoppingCart.js';
 // console.log(price);
 
-// import add, { cart } from './shoppingCart.js';
-// add('pizza', 2);
-// add('bread', 5);
-// add('apples', 4);
+import add, { cart } from './shoppingCart.js';
+add('pizza', 2);
+add('bread', 5);
+add('apples', 4);
 
 // console.log(cart);
 
@@ -79,13 +79,16 @@ const ShoppingCart2 = (function () {
 ShoppingCart2.addToCart('apple', 4);
 ShoppingCart2.addToCart('pizza', 2);
 
-*/
 // CommonJS Modules
 // A Brief Introduction to the Command Line
 
+*/
+
 // Introduction to NPM
 
-import clodeDeep from './node_modules/lodash-es/cloneDeep.js';
+// import clodeDeep from './node_modules/lodash-es/cloneDeep.js';
+import clodeDeep from 'lodash-es';
+// import clodeDeep from 'lodash';
 
 const state = {
   cart: [
@@ -102,4 +105,9 @@ const stateDeepClone = clodeDeep(state);
 
 state.user.loggedIn = false;
 console.log(stateClone);
+
 console.log(stateDeepClone);
+
+if (module.hot) {
+  module.hot.accept();
+}
