@@ -17,10 +17,10 @@ console.log('Importing module');
 // import add, { addToCart, totalPrice as price, tq } from './shoppingCart.js';
 // console.log(price);
 
-import add, { cart } from './shoppingCart.js';
-add('pizza', 2);
-add('bread', 5);
-add('apples', 4);
+// import add, { cart } from './shoppingCart.js';
+// add('pizza', 2);
+// add('bread', 5);
+// add('apples', 4);
 
 // console.log(cart);
 
@@ -82,13 +82,11 @@ ShoppingCart2.addToCart('pizza', 2);
 // CommonJS Modules
 // A Brief Introduction to the Command Line
 
-*/
-
 // Introduction to NPM
 
-// import clodeDeep from './node_modules/lodash-es/cloneDeep.js';
-import clodeDeep from 'lodash-es';
-// import clodeDeep from 'lodash';
+// import cloneDeep from './node_modules/lodash-es/cloneDeep.js';
+import cloneDeep from 'lodash-es';
+// import cloneDeep from 'lodash';
 
 const state = {
   cart: [
@@ -101,7 +99,7 @@ const state = {
 };
 
 const stateClone = Object.assign({}, state);
-const stateDeepClone = clodeDeep(state);
+const stateDeepClone = cloneDeep(state);
 
 state.user.loggedIn = false;
 console.log(stateClone);
@@ -111,3 +109,13 @@ console.log(stateDeepClone);
 if (module.hot) {
   module.hot.accept();
 }
+*/
+
+// Configuring Babel and Polyfilling
+
+import 'core.js/stable';
+// import 'core-js/stable/array/find'
+// import 'core-js/stable/promise'
+
+// Polifilling async functions
+import 'regenerator-runtime/runtime';

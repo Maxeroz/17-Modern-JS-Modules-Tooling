@@ -648,14 +648,14 @@ ShoppingCart2.addToCart('pizza', 2);
 // A Brief Introduction to the Command Line
 
 */ // Introduction to NPM
-// import clodeDeep from './node_modules/lodash-es/cloneDeep.js';
+// import cloneDeep from './node_modules/lodash-es/cloneDeep.js';
 var _lodashEs = require("lodash-es");
 var _lodashEsDefault = parcelHelpers.interopDefault(_lodashEs);
 console.log("Importing module");
 (0, _shoppingCartJsDefault.default)("pizza", 2);
 (0, _shoppingCartJsDefault.default)("bread", 5);
 (0, _shoppingCartJsDefault.default)("apples", 4);
-// import clodeDeep from 'lodash';
+// import cloneDeep from 'lodash';
 const state = {
     cart: [
         {
@@ -678,7 +678,7 @@ console.log(stateClone);
 console.log(stateDeepClone);
 if (module.hot) module.hot.accept();
 
-},{"./shoppingCart.js":"l6bJl","lodash-es":"bXNwz","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"l6bJl":[function(require,module,exports) {
+},{"./shoppingCart.js":"l6bJl","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","lodash-es":"bXNwz"}],"l6bJl":[function(require,module,exports) {
 // Exporting module
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
