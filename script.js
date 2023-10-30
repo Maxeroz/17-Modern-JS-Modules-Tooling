@@ -6,7 +6,7 @@
 // addToCart('bread', 5);
 // console.log(price, tq);
 
-import 'core-js/actual';
+// import 'core-js/actual';
 console.log('Importing module');
 
 // console.log(shippingCost);
@@ -84,8 +84,8 @@ ShoppingCart2.addToCart('pizza', 2);
 // A Brief Introduction to the Command Line
 
 // Introduction to NPM
-
-// import cloneDeep from './node_modules/lodash-es/cloneDeep.js';
+*/
+import cloneDeep from './node_modules/lodash-es/cloneDeep.js';
 // import cloneDeep from 'lodash-es';
 // import cloneDeep from 'lodash';
 
@@ -110,7 +110,6 @@ console.log(stateDeepClone);
 if (module.hot) {
   module.hot.accept();
 }
-*/
 
 // Configuring Babel and Polyfilling
 
