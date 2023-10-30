@@ -17,5 +17,6 @@
   },
   "devDependencies": {
     "parcel": "^2.10.1"
-  }
+  },
+  "browserlist": "last 2 versions, > 0/5% and ei >=11"
 }
