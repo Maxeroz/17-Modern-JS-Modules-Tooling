@@ -129,3 +129,5 @@ if (module.hot) {
 // console.log(maksim);
 
 // Review: Writing Clean and Modern JavaScript
+
+// Declarative and Functional JavaScript Principles

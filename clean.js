@@ -14,7 +14,8 @@ const spendingLimits = {
   matilda: 100,
 };
 
-const getLimit = user => spendingLimits?.[user] ?? 0;
+const getLimit = user => spendingLimits?.[user] || 0;
+
 const addExpense = function (value, description, user = 'jonas') {
   user = user.toLowerCase();
 
@@ -24,7 +25,7 @@ const addExpense = function (value, description, user = 'jonas') {
 };
 addExpense(10, 'Pizza 🍕');
 addExpense(100, 'Going to movies 🍿', 'Matilda');
-addExpense(200, 'Stuff', 'Jay');
+// addExpense(200, 'Stuff', 'Jay');
 
 const checkExpenses = function () {
   for (const entry of budget)
@@ -43,4 +44,4 @@ const logBigExpenses = function (bigLimit) {
 };
 
 console.log(budget);
-logBigExpenses(1000);
+logBigExpenses(100);
