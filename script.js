@@ -84,7 +84,7 @@ ShoppingCart2.addToCart('pizza', 2);
 // A Brief Introduction to the Command Line
 
 // Introduction to NPM
-*/
+
 import cloneDeep from './node_modules/lodash-es/cloneDeep.js';
 // import cloneDeep from 'lodash-es';
 // import cloneDeep from 'lodash';
@@ -131,3 +131,5 @@ if (module.hot) {
 // Review: Writing Clean and Modern JavaScript
 
 // Declarative and Functional JavaScript Principles
+
+*/
