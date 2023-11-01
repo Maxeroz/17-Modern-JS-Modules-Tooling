@@ -1,6 +1,7 @@
 'user strict';
 
 // const { get } = require('core-js/core/dict');
+/*
 
 const budget = Object.freeze([
   { value: 250, description: 'Sold old TV 📺', user: 'jonas' },
@@ -90,3 +91,51 @@ const logBigExpenses = function (state, bigLimit) {
 
 // console.log(budget);
 logBigExpenses(finalBudget, 500);
+
+*/
+
+const budget = Object.freeze([
+  { value: 250, description: 'Sold old TV 📺', user: 'jonas' },
+  { value: -45, description: 'Groceries 🥑', user: 'jonas' },
+  { value: 3500, description: 'Monthly salary 👩‍💻', user: 'jonas' },
+  { value: 300, description: 'Freelancing 👩‍💻', user: 'jonas' },
+  { value: -1100, description: 'New iPhone 📱', user: 'jonas' },
+  { value: -20, description: 'Candy 🍭', user: 'matilda' },
+  { value: -125, description: 'Toys 🚂', user: 'matilda' },
+  { value: -1800, description: 'New Laptop 💻', user: 'jonas' },
+]);
+
+const spendingLimits = Object.freeze({
+  jonas: 1500,
+  matilda: 100,
+});
+
+// Geir
+
+const newExpenses = Object.freeze([
+  { value: 10, description: 'Pizza 🍕', user: '' },
+  { value: 100, description: 'Movies 🍿', user: 'Matilda' },
+  { value: 200, description: 'Stuff', user: 'Jay' },
+]);
+
+const getLimit = (limits, user) => limits?.[user] || 0;
+
+const setUserName = user => (user ? user.toLowerCase() : 'jonas');
+
+const expensesToAdd = (expenses, limits) =>
+  expenses
+    .map(entry => ({ ...entry, user: setUserName(entry.user) }))
+    .filter(entry => entry.value <= getLimit(limits, entry.user));
+
+const checkExpense = (entry, limits) =>
+  entry.value < -getLimit(limits, entry.user)
+    ? { ...entry, flag: 'limit' }
+    : entry;
+
+const finalBudget = budget
+  .concat(expensesToAdd(newExpenses, spendingLimits))
+  .map(el => checkExpense(el, spendingLimits));
+
+console.log(finalBudget);
+
+console.log(newExpenses);
